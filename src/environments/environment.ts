@@ -6,6 +6,12 @@ export const environment = {
   production: false
 };
 
+export const DEV_URLS = {
+  upc_campaign_url: '../../../assets/json/upcoming_campaigns.json',
+  live_campaign_url : '../../../assets/json/live_campaigns.json',
+  past_campaign_url : '../../../assets/json/past_campaigns.json'
+}
+
 /*
  * For easier debugging in development mode, you can import the following file
  * to ignore zone related error stack frames such as `zone.run`, `zoneDelegate.invokeTask`.

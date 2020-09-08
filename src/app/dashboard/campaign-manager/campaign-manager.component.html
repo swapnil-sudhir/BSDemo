@@ -1,0 +1,26 @@
+<app-header></app-header>
+<div class="campaign-container">
+    <h1 i18n class="base-heading">Manage Campaigns</h1>
+</div>
+
+
+<div class="material-container">
+    <div class="tab">
+        <button class="tablinks" (click)="opencampaign($event, 'upcoming')" id="defaultOpen">Upcoming Campaigns</button>
+        <button class="tablinks" (click)="opencampaign($event, 'live')">Live Campaigns</button>
+        <button class="tablinks" (click)="opencampaign($event, 'past')">Past Campaigns</button>
+    </div>
+    
+
+    <div id="upcoming" class="tabcontent">
+        <app-tab-header [type]="text_value"></app-tab-header>
+    </div>
+    
+    <div id="live" class="tabcontent">
+        <app-tab-header [type]="text_value"></app-tab-header>
+    </div>
+    
+    <div id="past" class="tabcontent">
+        <app-tab-header [type]="text_value"></app-tab-header>
+    </div>
+</div>

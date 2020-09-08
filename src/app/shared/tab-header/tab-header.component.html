@@ -1,0 +1,112 @@
+<div class="render-result-container">
+    <div class="base-rectangle-container">
+        <div class="date-container">
+            Date
+        </div>
+        <div class="campaign-container">
+            Campaign
+        </div>
+        <div class="view-container">
+            View
+        </div>
+        <div class="actions-container">
+            Actions
+        </div>
+    </div>
+    <div class="table-cards-container">
+        <div class="card-component" *ngFor = "let data of data_dict">
+            <div class="date-container">
+                <span class="main-date">{{data['date']}}</span>
+                <span class="sub-days" *ngIf="type === 'past'"> {{dayDifferenceCounter(data['date'])}} Days Ago</span>
+                <span class="sub-days" *ngIf="type === 'upcoming'"> {{dayDifferenceCounter(data['date'])}} Days Ahead</span>
+                <span class="sub-days" *ngIf="type === 'live'"> {{dayDifferenceCounter(data['date'])}} Going On</span>
+            </div>
+            <div class="campaign-details-container">
+                <img src="../../../assets/images/games/game1.svg" height="40px" width="40px" class="game-image">
+                <div class="game-name-container">
+                    <span class="game-name">{{data['campaign_name']}}</span>
+                    <span class="county">{{data['county']}}</span>
+                </div>
+            </div>
+            <div class="pricing-container">
+                <img src="../../../assets/images/pricing.PNG" height="30px" width="30px" class="pricing-image">
+                <span class="price-details" data-toggle="modal" data-target="#myModal" (click)="passDataToModal(data['id'], type)">View Price</span>
+            </div>
+            <div class="action-items-container">
+                <img src="../../../assets/images/file.png" height="26px" width="24px" class="file-image">
+                <span class="csv">CSV</span>
+
+                <img src="../../../assets/images/statistics-report.png" height="26px" width="24px" class="report-image">
+                <span class="csv">Report</span>
+
+                <img src="../../../assets/images/calendar.png" height="26px" width="24px" class="report-image">
+                <span class="csv" id="again" (click)="ShowDatePicker()">Schedule Again</span>
+            </div>
+            <!-- <hr> -->
+        </div>
+        
+    </div>
+</div>
+
+<div class="game-card" *ngFor = "let data of data_dict">
+    <div class="text-container">
+        <div class="date-container">
+            <span class="main-date">{{data['date']}}</span>
+            <span class="sub-days" *ngIf="type === 'past'"> {{dayDifferenceCounter(data['date'])}} Days Ago</span>
+            <span class="sub-days" *ngIf="type === 'upcoming'"> {{dayDifferenceCounter(data['date'])}} Days Ahead</span>
+            <span class="sub-days" *ngIf="type === 'live'"> {{dayDifferenceCounter(data['date'])}} Going On</span>
+        </div>
+        <div class="campaign-details-container">
+            <img src="../../../assets/images/games/game1.svg" height="40px" width="40px" class="game-image">
+            <div class="game-name-container">
+                <span class="game-name">{{data['campaign_name']}}</span>
+                <span class="county">{{data['county']}}</span>
+            </div>
+        </div>
+        <div class="action-items-bag">
+            <img src="../../../assets/images/file.png" height="26px" width="24px" class="file-image">
+            <span class="csv">CSV</span>
+
+            <img src="../../../assets/images/statistics-report.png" height="26px" width="24px" class="report-image">
+            <span class="csv">Report</span>
+
+            <img src="../../../assets/images/calendar.png" height="26px" width="24px" class="report-image">
+            <span class="csv" id="again" (click)="ShowDatePicker()">Schedule Again</span>
+        </div>
+
+
+        <div class="pricing-container">
+            <img src="../../../assets/images/pricing.PNG" height="30px" width="30px" class="pricing-image">
+            <span class="price-details" data-toggle="modal" data-target="#myModal" (click)="passDataToModal(data['id'], type)">View Price</span>
+        </div>
+    </div>
+   
+
+</div>
+
+<div id="myModal" class="modal fade" role="dialog">
+    <div class="modal-dialog priceModal">
+      <div class="modal-content">
+        <div class="modal-header header-container">
+          <img src="../../../assets/images/games/game2.svg" height="137px" width="137px">
+          <div class="game-details">
+            <span class="game-name">{{game_name}}</span>
+            <span class="game-county">{{game_count}}</span>
+          </div>
+        </div>
+        <div class="modal-body">
+            <span class="pricing-title">PRICING</span>
+            <div class="pricing-game-container" *ngFor="let item of price_dict[0] | keyvalue">
+                <div class="price-card">
+                    <span class="price-key">{{item.key}}</span>
+                    <span class="price-value">{{item.value}}</span>
+                </div>
+            </div>
+        </div>
+        <div class="modal-footer footer-container" style="border-top:none !important;">
+          <button type="button" class="btn btn-default closure-button" data-dismiss="modal"><span class="close-text">Close</span></button>
+        </div>
+      </div>
+  
+    </div>
+  </div>

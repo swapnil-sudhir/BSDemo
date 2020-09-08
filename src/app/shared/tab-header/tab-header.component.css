@@ -1,0 +1,466 @@
+.render-result-container{
+    width: 1077px;
+    height: 781px;
+    left: 181px;
+    top: 294px;
+
+    background: #FFFFFF;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.base-rectangle-container{
+    width: 1077px;
+    height: 48px;
+    left: 181px;
+    top: 293px;
+    display: flex;
+    background: #F1F1F4;
+  }
+  .date-container{
+    /* position: absolute; */
+    width: 39px;
+    height: 24px;
+    left: 201px;
+    margin:12px 129px 12px 20px;
+    
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+
+    text-transform: uppercase;
+    
+    color: #556789;
+  }
+
+  .campaign-container{
+    width: 82px;
+    height: 24px;
+    left: 369px;
+    top: 305px;
+    margin: 12px 251px 12px 0px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    /* identical to box height, or 150% */
+    
+    text-transform: uppercase;
+    
+    color: #556789;
+  }
+  .view-container{
+    width: 38px;
+    height: 24px;
+    left: 702px;
+    top: 305px;
+    margin: 12px 164px 12px 0px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    /* identical to box height, or 150% */
+    
+    text-transform: uppercase;
+    
+    color: #556789;
+  }
+
+  .actions-container{
+    width: 67px;
+    height: 24px;
+    left: 904px;
+    top: 305px; 
+    margin: 12px 287px 12px 0px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    text-transform: uppercase;
+    color: #556789;
+  }
+
+
+  .card-component{
+    display: flex;
+  }
+  .date-container{
+      display: flex;
+      flex-direction: column;
+      
+  }
+  .main-date{
+    height: 24px;
+    width: 270%;
+    left: 0%;
+    right: 91.34%;
+    top: calc(50% - 24px/2 - 18px);
+    text-transform: none ;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    color: #2B416C;
+  }
+  .sub-days{
+    height: 24px;
+    width: 240%;
+    left: 0%;
+    right: 93.36%;
+    top: calc(50% - 24px/2 + 3px);
+    text-transform: none ;
+    font-family: Roboto;
+    font-style: italic;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 24px;
+    color: #7788A3;
+  }
+
+  .campaign-details-container{
+      display: flex;
+      width: 230px;
+  }
+  .game-image{
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: 0%;
+    margin: 16px 14px 24.5px 0px;
+  }
+  .game-name-container{
+      display: flex;
+      flex-direction: column;
+  }
+
+  .game-name{
+    height: 24px;
+    left: 21.46%;
+    right: 67.08%;
+    top: calc(50% - 24px/2 - 23px);
+    margin: 10px 0px 4px 0px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    color: #556789;
+    cursor: pointer;
+    width: 195px;
+    
+  }
+
+  .county{
+    height: 16px;
+    left: 21.46%;
+    right: 76.8%;
+    top: calc(50% - 16px/2 + 1px);
+    
+    font-family: Roboto;
+    font-style: italic;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 16px;
+    cursor: pointer;
+    color: #9CA2B7;
+  }
+
+  .pricing-container{
+      display: flex;
+  }
+  .pricing-image{
+      margin-left: 105px;
+      margin-top: 22px;
+      cursor: pointer;
+  }
+  .price-details{
+    height: 16px;
+    left: 28.04%;
+    right: -0.93%;
+    top: calc(50% - 16px/2);
+    margin-left: 4px;
+    margin-top: 27px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 16px;
+    cursor: pointer;
+    color: #7788A3;
+    
+  }
+
+  .action-items-container{
+      display: flex;
+  }
+
+  .file-image{
+      margin-top: 22px;
+      margin-left: 96px;
+      margin-right: 6px;
+
+  }
+  .csv{
+    height: 16px;
+    left: 48.08%;
+    right: 0%;
+    top: calc(50% - 16px/2 + 1px);
+    cursor: pointer;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 16px;
+    margin-top: 27px;
+    color: #7788A3;
+  }
+
+  .report-image{
+    margin-top: 22px;
+    margin-left: 41px;
+    margin-right: 6px;
+  }
+
+  /* .bar-container{
+    left: 0%;
+    right: 0%;
+    top: 97.86%;
+    bottom: 0.71%;
+    
+    border: 1px solid #ECECEC;
+    margin-right: 18px;
+    margin-left: 18px;
+  } */
+
+  hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ECECEC;
+    margin: 0px 18px 0px 18px;
+    padding: 0;
+}
+
+.priceModal{
+  width: 400px !important;
+  height: 464px !important;
+}
+
+.header-container{
+  border-bottom: none !important;
+  display: flex !important;
+}
+
+.game-details{
+  display: flex;
+  flex-direction: column;
+  padding-top: 62px;
+}
+
+/* .game-name{
+  height: 19px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  margin-bottom: 14px;
+}
+
+.game-county{
+  height: 16px;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;
+  color: #9CA2B7;
+} */
+
+.pricing-title{
+  height: 32px;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 32px;
+  color: #2B416C;
+  margin: 0px 10px;
+}
+
+.pricing-game-container{
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+.price-card{
+  display: flex;
+  justify-content: space-between;
+}
+.price-key{
+  font-size: 16px;
+  line-height: 24px;
+  color: #7788A3;
+}
+
+.price-value{
+  font-size: 16px;
+  line-height: 24px;
+  color: #7788A3;
+}
+
+.footer-container{
+  display: flex;
+  justify-content: center;
+}
+
+.closure-button{
+  border: 2px solid #181B34;
+  box-sizing: border-box;
+}
+
+.close-text{
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  color: #181B34;
+}
+
+.game-card{
+  display:none
+}
+
+
+@media screen and (max-width: 767px) {
+
+  .base-rectangle-container{
+    display: none;
+  }
+  .card-component{
+    display: none;
+  }  
+
+  .render-result-container{
+    display: none;
+  }
+
+  .game-card{
+    display: flex;
+    flex-direction: column;
+  }
+  .date-container{
+    margin-top: 20px;
+  }
+  .text-container{
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid lightgray;
+    border-radius: 10px;
+    margin-bottom: 10px;
+  }
+  .main-date{
+    height: 24px;
+    width: 270%;
+    left: 0%;
+    right: 91.34%;
+    top: calc(50% - 24px/2 - 18px);
+    text-transform: none ;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 18px;
+    color: #2B416C;
+  }
+  .sub-days{
+    height: 24px;
+    width: 240%;
+    left: 0%;
+    right: 93.36%;
+    top: calc(50% - 24px/2 + 3px);
+    text-transform: none ;
+    font-family: Roboto;
+    font-style: italic;
+    font-weight: 700;
+    font-size: 10px;
+    line-height: 18px;
+    color: #7788A3;
+  }
+
+  .campaign-details-container{
+      display: flex;
+      width: 230px;
+  }
+  .game-name-container{
+    margin-top: 3px;
+  }
+  .game-image{
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: 0%;
+    margin: 16px 14px 24.5px 0px;
+  }
+
+  .game-name{
+    height: 24px;
+    left: 21.46%;
+    right: 67.08%;
+    top: calc(50% - 24px/2 - 23px);
+    margin: 10px 0px 4px 0px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 16px;
+    color: #556789;
+    cursor: pointer;
+    width: 130px;
+    
+  }
+
+  .county{
+    height: 16px;
+    left: 21.46%;
+    right: 76.8%;
+    top: calc(50% - 16px/2 + 1px);
+    
+    font-family: Roboto;
+    font-style: italic;
+    font-weight: 700;
+    font-size: 10px;
+    line-height: 18px;
+    cursor: pointer;
+    color: #9CA2B7;
+  }
+  .action-items-bag{
+    display: flex;
+  }
+}
+
+.action-items-bag{
+  display: none;
+}
+
+
+@media screen and (max-width: 575px) {
+  .base-rectangle-container{
+    /* width: 1077px;
+    height: 48px;
+    left: 181px;
+    top: 293px;
+    display: flex;
+    background: #F1F1F4; */
+    display: none;
+  }
+
+  .card-component{
+    display: none;
+  }  
+
+  .render-result-container{
+    display: none;
+  }
+
+
+}

@@ -24,6 +24,7 @@
               "src/assets"
             ],
             "styles": [
+              "src/custom-theme.scss",
               "src/styles.css"
             ],
             "scripts": []
@@ -119,6 +120,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "BSDemo"
+    }
+  },
+  "defaultProject": "BSDemo",
+  "cli": {
+    "analytics": "8f00abdc-155f-4e5a-a88d-9deaff286903"
+  }
 }

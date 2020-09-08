@@ -1,0 +1,60 @@
+{
+    "data" : [
+        {
+            "id" : "lc01",
+            "date" : "Sept 2020, 8",
+            "campaign_name" : "Bone Wars",
+            "county" : "US",
+            "price" : [{
+                "1 Week - 1 Month" : "$ 100.00",
+                "6 Months" : "$ 500.00",
+                "1 Year" : "$ 900.00"
+            }]
+        },
+        {
+            "id" : "lc02",
+            "date" : "Sept 2020, 8",
+            "campaign_name" : "VISA - Apprentice",
+            "county" : "France",
+            "price" : [{
+                "1 Week - 1 Month" : "$ 99.00",
+                "6 Months" : "$ 999.00",
+                "1 Year" : "$ 9009.00"
+            }]
+        },
+        {
+            "id" : "lc03",
+            "date" : "Sept 2020, 8",
+            "campaign_name" : "Sagacious Fight",
+            "county" : "Canada",
+            "price" : [{
+                "1 Week - 1 Month" : "$ 100.00",
+                "6 Months" : "$ 500.00",
+                "1 Year" : "$ 900.00"
+            }]
+        },
+        {
+            "id" : "lc04",
+            "date" : "Sept 2020, 8",
+            "campaign_name" : "COVID Trends",
+            "county" : "India",
+            "price" : [{
+                "1 Week - 1 Month" : "$ 100.00",
+                "6 Months" : "$ 500.00",
+                "1 Year" : "$ 900.00"
+            }]
+        },
+        {
+            "id" : "lc05",
+            "date" : "Sept 2020, 8",
+            "campaign_name" : "Flush Cards",
+            "county" : "Ontario",
+            "price" : [{
+                "1 Week - 1 Month" : "$ 100.00",
+                "6 Months" : "$ 500.00",
+                "1 Year" : "$ 900.00"
+            }]
+        }
+
+    ]
+}

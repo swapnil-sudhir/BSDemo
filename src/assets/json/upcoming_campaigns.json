@@ -1,0 +1,60 @@
+{
+    "data" : [
+        {
+            "id" : "upc01",
+            "date" : "Oct 2020, 29",
+            "campaign_name" : "Game of Coins",
+            "county" : "US",
+            "price" : [{
+                "1 Week - 1 Month" : "$ 100.00",
+                "6 Months" : "$ 500.00",
+                "1 Year" : "$ 900.00"
+            }]
+        },
+        {
+            "id" : "upc02",
+            "date" : "Nov 2020, 14",
+            "campaign_name" : "I am The King",
+            "county" : "France",
+            "price" : [{
+                "1 Week - 1 Month" : "$ 99.00",
+                "6 Months" : "$ 999.00",
+                "1 Year" : "$ 9009.00"
+            }]
+        },
+        {
+            "id" : "upc03",
+            "date" : "Sept 2020, 20",
+            "campaign_name" : "Stone Cold Cut - Final Pro",
+            "county" : "India",
+            "price" : [{
+                "1 Week - 1 Month" : "$ 100.00",
+                "6 Months" : "$ 500.00",
+                "1 Year" : "$ 900.00"
+            }]
+        },
+        {
+            "id" : "upc04",
+            "date" : "Apr 2021, 11",
+            "campaign_name" : "COVID - OVER",
+            "county" : "India",
+            "price" : [{
+                "1 Week - 1 Month" : "$ 100.00",
+                "6 Months" : "$ 500.00",
+                "1 Year" : "$ 900.00"
+            }]
+        },
+        {
+            "id" : "upc05",
+            "date" : "Aug 2021, 21",
+            "campaign_name" : "Black Jack",
+            "county" : "Canada",
+            "price" : [{
+                "1 Week - 1 Month" : "$ 100.00",
+                "6 Months" : "$ 500.00",
+                "1 Year" : "$ 900.00"
+            }]
+        }
+
+    ]
+}
