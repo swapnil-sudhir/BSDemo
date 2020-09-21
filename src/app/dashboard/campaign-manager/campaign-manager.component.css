@@ -25,17 +25,19 @@
     width: 1077px;
     height: 1px;
     left: 181px;
-    top: 254px;
+    top: 50px;
     display: flex;
     flex-direction: column;
+    /* border: 1px solid red; */
 }
 
 .tab {
     position: absolute;
     overflow: hidden;
     border: 1px solid #ccc;
-    background-color: #f1f1f1;
+    /* background-color: #f1f1f1; */
     border:none;
+    width: 99%;
 
   }
   
@@ -48,17 +50,15 @@
     cursor: pointer;
     padding: 11px 16px;
     transition: 0.3s;
-    /* position: absolute; */
-    /* width: 178px; */
-    /* height: 28px; */
     left: 200px;
     top: 210px;
+    color:gray;
     font-family: Roboto;
     font-style: normal;
     font-weight: normal;
     font-size: 18px;
     line-height: 28px;
-    
+    width: 33%;
     /* margin-bottom: 50px; */
   }
   
@@ -70,8 +70,8 @@
 
   .tab button.active {
     /* background-color: #ccc; */
-    color: #83A515;
-    border-bottom:1px solid #83A515;
+    color: black;
+    border-bottom:2px solid navy;
     font-family: Roboto;
     font-style: normal;
     font-weight: 500;

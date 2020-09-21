@@ -1,7 +1,8 @@
 import { Component, OnInit, Input, OnChanges } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { DEV_URLS } from '../../../environments/environment';
-
+// import {adfa} from '../../../assets/json/'
+// import {}
 @Component({
   selector: 'app-tab-header',
   templateUrl: './tab-header.component.html',
@@ -11,6 +12,10 @@ export class TabHeaderComponent implements OnInit, OnChanges {
 
   constructor(private http : HttpClient) { }
   @Input() type :string ;
+  fileData: File = null;
+  previewUrl:any = null;
+  fileUploadProgress: string = null;
+  uploadedFilePath: string = null;
   
   data_dict : any = []
   date_difference : number;
@@ -23,15 +28,48 @@ export class TabHeaderComponent implements OnInit, OnChanges {
     
   }
 
+  fileProgress(fileInput: any) {
+    this.fileData = <File>fileInput.target.files[0];
+    this.preview();
+}
+
+preview() {
+  // Show preview 
+  var mimeType = this.fileData.type;
+  if (mimeType.match(/image\/*/) == null) {
+    return;
+  }
+
+  var reader = new FileReader();      
+  reader.readAsDataURL(this.fileData); 
+  reader.onload = (_event) => { 
+    this.previewUrl = reader.result; 
+  }
+}
+
+onSubmit() {
+  const formData = new FormData();
+    formData.append('file', this.fileData);
+    this.http.post('url/to/your/api', formData)
+      .subscribe(res => {
+        console.log(res);
+        this.uploadedFilePath = res.data.filePath;
+        alert('SUCCESS !!');
+      })
+}
+
+startUpload(){
+  document.getElementById('getFile').click();
+}
+
   ngOnChanges(): void{
     // console.log(this.type);
     if(this.type==="upcoming"){
-      // console.log("Its working once")
-      this.getCampaignList(0);
+
     }else if(this.type === "live"){
-      this.getCampaignList(1);
+
     }else if(this.type === "past"){
-      this.getCampaignList(2);
+
     }
   }
 
@@ -48,17 +86,17 @@ export class TabHeaderComponent implements OnInit, OnChanges {
   getCampaignList(value : number){
     // console.log(value);
     if(value === 0){
-      this.http.get(DEV_URLS.upc_campaign_url).subscribe(response =>{
+      this.http.get('../../../assets/json/upcoming_campaigns.json').subscribe(response =>{
         // console.log(response);
         this.data_dict = response['data'];
       })
     }else if(value == 1){
-      this.http.get(DEV_URLS.live_campaign_url).subscribe(response =>{
+      this.http.get('../../../assets/json/live_campaigns.json').subscribe(response =>{
         // console.log(response);
         this.data_dict = response['data'];
       })
     }else if(value == 2){
-      this.http.get(DEV_URLS.past_campaign_url).subscribe(response =>{
+      this.http.get('../../../assets/json/past_campaigns.json').subscribe(response =>{
         // console.log(response);
         this.data_dict = response['data'];
       })
@@ -91,7 +129,7 @@ export class TabHeaderComponent implements OnInit, OnChanges {
     console.log(value, type)
 
     if(type === 'upcoming'){
-      this.http.get(DEV_URLS.upc_campaign_url).subscribe(response =>{
+      this.http.get('../../../assets/json/upcoming_campaigns.json').subscribe(response =>{
         this.price_dict = "";
         this.data_dict = response['data'];
         for(let data of response['data']){
@@ -104,7 +142,7 @@ export class TabHeaderComponent implements OnInit, OnChanges {
         }
       })
     }else if(type === 'live'){
-      this.http.get(DEV_URLS.live_campaign_url).subscribe(response =>{
+      this.http.get('../../../assets/json/live_campaigns.json').subscribe(response =>{
         this.price_dict = "";
         this.data_dict = response['data'];
         for(let data of response['data']){
@@ -117,7 +155,7 @@ export class TabHeaderComponent implements OnInit, OnChanges {
         }
       })
     }else if(type === 'past'){
-      this.http.get(DEV_URLS.past_campaign_url).subscribe(response =>{
+      this.http.get('../../../assets/json/past_campaigns.json').subscribe(response =>{
         this.price_dict = "";
         this.data_dict = response['data'];
         for(let data of response['data']){

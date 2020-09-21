@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "bluestacks-demo": {
+      "hosting": {
+        "BSDemo": [
+          "bluestacks-demo"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "bluestacks-demo"
+  }
+}
